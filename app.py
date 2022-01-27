@@ -102,7 +102,6 @@ app.layout = html.Div(children=[
               [State('input-1-state', 'value')]
              )
 
-### Is this the correct variable for the parens?
 def update_output(n_clicks, children):
 
     search_url = "https://api.twitter.com/2/tweets/search/recent"
