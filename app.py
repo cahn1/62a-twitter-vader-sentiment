@@ -15,9 +15,7 @@ from api_keys.myapikey import apikey
 
 tabtitle = 'Twitter Search'
 sourceurl = 'https://github.com/twitterdev/Twitter-API-v2-sample-code'
-githublink = 'https://github.com/shepparjani/twitterapi.git'
-placeholderinput = ""
-
+githublink = 'https://github.com/shepparjani/twitterapi-open'
 
 ########### Set up the default figures ######
 
