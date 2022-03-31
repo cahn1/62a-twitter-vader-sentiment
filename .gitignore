@@ -1,3 +1,8 @@
+.env
+venv/
+.ipynb_checkpoints/
+.idea/
+
 #additions
 notes/
 api_keys/
