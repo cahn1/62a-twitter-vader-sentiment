@@ -21,12 +21,12 @@ githublink = 'https://github.com/shepparjani/twitterapi-open'
 
 def base_fig():
     data=go.Table(columnwidth = [200,200,1000],
-                  header=dict(values=['author_id', 'id', 'text'], align=['left']),
-                  cells=dict(align=['left'],
-                             values=[[1,2,3],
-                                     [1,2,3],
-                                     ['waiting for data','waiting for data','waiting for data']])
-                  )
+                    header=dict(values=['author_id', 'id', 'text'], align=['left']),
+                    cells=dict(align=['left'],
+                               values=[[1,2,3],
+                                       [1,2,3],
+                                       ['waiting for data','waiting for data','waiting for data']])
+                 )
     fig = go.Figure([data])
     return fig
 
@@ -46,7 +46,7 @@ def connect_to_endpoint(url, params):
     response = requests.get(url, auth=bearer_oauth, params=params)
     #print(response.status_code)
     #if response.status_code != 200:
-    #raise Exception(response.status_code, response.text)
+        #raise Exception(response.status_code, response.text)
     return response.json()
 
 def generate_output(search_url, query_params):
@@ -57,12 +57,12 @@ def generate_output(search_url, query_params):
 
     #set up table
     data=go.Table(columnwidth = [200,200,1000],
-                  header=dict(values=tweetdf.columns, align=['left']),
-                  cells=dict(align=['left'],
-                             values=[tweetdf['author_id'].values,
-                                     tweetdf['id'].values,
-                                     tweetdf['text'].values])
-                  )
+                    header=dict(values=tweetdf.columns, align=['left']),
+                    cells=dict(align=['left'],
+                               values=[tweetdf['author_id'].values,
+                                       tweetdf['id'].values,
+                                       tweetdf['text'].values])
+                 )
     figure = go.Figure([data])
     return figure
 
@@ -90,7 +90,7 @@ app.layout = html.Div(children=[
     html.A('Code on Github', href=githublink),
     html.Br(),
     html.A("Data Source", href=sourceurl),
-]
+    ]
 )
 
 
@@ -98,7 +98,7 @@ app.layout = html.Div(children=[
 @app.callback(Output('figure-1', 'figure'),
               [Input('submit-button-state', 'n_clicks')],
               [State('input-1-state', 'value')]
-              )
+             )
 
 def update_output(n_clicks, children):
 

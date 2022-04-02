@@ -2,6 +2,8 @@
 venv/
 .ipynb_checkpoints/
 .idea/
+secret/
+bkp/
 
 #additions
 notes/
