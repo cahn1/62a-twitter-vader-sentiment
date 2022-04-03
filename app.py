@@ -5,6 +5,7 @@ import dash
 from dash import dcc
 from dash import html
 from dash.dependencies import Input, Output, State
+import dash_bootstrap_components as dbc
 
 import plotly.graph_objs as go
 
@@ -104,7 +105,10 @@ app.layout = html.Div(
                 html.Button(
                     id='submit-button-state',
                     n_clicks=0,
+                    style={'background-color': '#bfc9ca'},
                     children='Vader'),
+                # dbc.Button("Vader", id='submit-button-state', n_clicks=0,
+                #            color='#2e86c1', className="me-1"),
                 html.Div(id='output-state1'),
                 dcc.Graph(id='figure-1'),
                 html.Div(id='output-state2'),

@@ -1,6 +1,7 @@
 Click
 dash
 dash-table
+dash_bootstrap_components
 Flask
 Flask-Compress
 future
