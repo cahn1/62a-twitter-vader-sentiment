@@ -28,3 +28,4 @@ pyshp
 Shapely
 requests
 tweepy
+vaderSentiment
